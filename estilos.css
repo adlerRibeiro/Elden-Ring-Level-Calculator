@@ -1,0 +1,117 @@
+body {
+   background-image: url("https://images6.alphacoders.com/131/1311862.jpeg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+}
+
+body::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+   padding: 20px;
+   color: #fdfc92;
+   position: relative;
+   z-index: 1;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: Helvetica, sans-serif;
+   font-size: large;
+}
+
+.main {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+}
+
+.input-group {
+   text-align: center;
+   flex-direction: column;
+   align-items: center;
+   margin-left: 10px;
+   margin-right: 10px;
+   width: 200px;
+}
+
+label {
+   font-weight: bold;
+}
+
+/* Esconder a seta padrão */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   appearance: none;
+   margin: 0;
+}
+
+/* Estilizar o input */
+input {
+   width: 100%;
+   color: #fffecb;
+   background-color: black;
+   border: 1px solid #e0c254;
+   border-radius: 4px;
+   padding: 8px;
+   text-align: center;
+}
+
+.label-barra {
+   text-align: center;
+}
+
+#label-runas,
+#runas {
+   align-self: flex-end;
+   text-align: end;
+   padding-right: 10px;
+}
+
+#label-minutos,
+#minutos {
+   align-self: flex-start;
+   text-align: start;
+   padding-left: 10px;
+}
+
+#minutos,
+#runas {
+   width: 50%;
+}
+
+#group-runas,
+#group-minutos {
+   padding: 0;
+}
+
+.resultados {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+   align-items: center;
+   justify-content: center;
+   margin-top: 80px;
+}
+
+.resultados > .input-group {
+   width: 100%;
+}
+
+.resultados > .row > input {
+   width: 100%;
+   font-size: larger;
+}
