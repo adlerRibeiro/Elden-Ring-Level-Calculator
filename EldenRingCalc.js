@@ -83,7 +83,7 @@ function calcularTempo() {
    var totalTempoInput = document.getElementById("total-tempo")
 
    // Verificar se ambos os campos de Runas e Minutos não estão vazios
-   if (runas !== 0 && minutos !== 0) {
+   if (runas !== 0 && minutos !== 0 && totalRunas) {
       var runasPorHora = Math.floor(runas / minutos) * 60
       var totalHoras = Math.ceil(totalRunas / runasPorHora)
 
