@@ -16,33 +16,35 @@
    <body>
       <div class="content">
          <div class="main">
-            <div class="row">
-               <div class="input-group col">
-                  <label for="level-atual">Level atual</label>
-                  <input id="level-atual" type="number" max="713" min="167" value="167" />
+            <div class="calc-group">
+               <div class="row">
+                  <div class="input-group col">
+                     <label for="level-atual">Level atual</label>
+                     <input id="level-atual" type="number" max="713" min="167" value="167" />
+                  </div>
+                  <div class="input-group col">
+                     <label for="level-maximo">Level desejado</label>
+                     <input id="level-maximo" type="number" max="713" min="167" value="713" />
+                  </div>
                </div>
-               <div class="input-group col">
-                  <label for="level-maximo">Level desejado</label>
-                  <input id="level-maximo" type="number" max="713" min="167" value="713" />
-               </div>
-            </div>
-            <div class="row">
-               <div class="input-group col" id="group-runas">
-                  <label for="runas" id="label-runas">Runas</label>
-                  <input id="runas" type="number" min="0" value="0" step="100" />
-               </div>
-               <label class="label-barra">/</label>
-               <div class="input-group col" id="group-minutos">
-                  <label for="minutos" id="label-minutos">Minutos</label>
-                  <input id="minutos" type="number" max="60" min="0" value="0" />
-               </div>
-            </div>
-            <div class="resultados column">
-               <div class="input-group row">
+               <div class="input-group resultados">
                   <label for="total-runas">Total de Runas Necessárias</label>
                   <input id="total-runas" type="number" readonly value="" />
                </div>
-               <div class="input-group row">
+            </div>
+            <div class="calc-group">
+               <div class="row">
+                  <div class="input-group col" id="group-runas">
+                     <label for="runas" id="label-runas">Runas</label>
+                     <input id="runas" type="number" min="0" value="0" step="100" />
+                  </div>
+                  <label class="label-barra">/</label>
+                  <div class="input-group col" id="group-minutos">
+                     <label for="minutos" id="label-minutos">Minutos</label>
+                     <input id="minutos" type="number" max="60" min="0" value="0" />
+                  </div>
+               </div>
+               <div class="input-group resultados">
                   <label for="total-tempo">Tempo Total Necessário</label>
                   <input id="total-tempo" readonly value="" />
                </div>

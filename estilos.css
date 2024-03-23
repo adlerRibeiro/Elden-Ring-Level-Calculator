@@ -35,15 +35,19 @@ body::before {
 .main {
    display: flex;
    flex-direction: column;
-   gap: 40px;
+   gap: 100px;
+}
+
+.calc-group {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
 }
 
 .input-group {
    text-align: center;
    flex-direction: column;
    align-items: center;
-   margin-left: 10px;
-   margin-right: 10px;
    width: 200px;
 }
 
@@ -101,17 +105,12 @@ input {
 .resultados {
    display: flex;
    flex-direction: column;
-   gap: 40px;
    align-items: center;
    justify-content: center;
-   margin-top: 80px;
-}
-
-.resultados > .input-group {
    width: 100%;
 }
 
-.resultados > .row > input {
+.resultados > input {
    width: 100%;
    font-size: larger;
 }
