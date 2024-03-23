@@ -19,6 +19,8 @@ function calcularRunas() {
    // Atualizar o valor do campo de entrada de total de runas
    var totalRunasInput = document.getElementById("total-runas")
    totalRunasInput.value = totalRunas.toString().replace(/\D/g, "") // remove todos os caracteres não numéricos
+
+   calcularTempo()
 }
 
 var timeout = null // variável para armazenar o identificador de timeout
@@ -73,3 +75,39 @@ function changeBackground(e) {
 
 // Adicionar um ouvinte de evento para o teclado
 document.addEventListener("keydown", changeBackground)
+
+function calcularTempo() {
+   var totalRunas = parseInt(document.getElementById("total-runas").value)
+   var runas = parseInt(document.getElementById("runas").value)
+   var minutos = parseInt(document.getElementById("minutos").value)
+   var totalTempoInput = document.getElementById("total-tempo")
+
+   // Verificar se ambos os campos de Runas e Minutos não estão vazios
+   if (runas !== 0 && minutos !== 0) {
+      var runasPorHora = Math.floor(runas / minutos) * 60
+      var totalHoras = totalRunas / runasPorHora
+
+      totalTempoInput.value = totalHoras.toString() + " horas"
+   } else {
+      totalTempoInput.value = ""
+   }
+}
+
+// Adicionar listeners de evento para os campos de entrada de Runas e Minutos
+document.getElementById("runas").addEventListener("input", function () {
+   // Limpar o timeout anterior, se houver
+   if (timeout) {
+      clearTimeout(timeout)
+   }
+   // Configurar um novo timeout
+   timeout = setTimeout(calcularTempo, 2000) // 2000 milissegundos = 2 segundos
+})
+
+document.getElementById("minutos").addEventListener("input", function () {
+   // Limpar o timeout anterior, se houver
+   if (timeout) {
+      clearTimeout(timeout)
+   }
+   // Configurar um novo timeout
+   timeout = setTimeout(calcularTempo, 2000) // 2000 milissegundos = 2 segundos
+})
